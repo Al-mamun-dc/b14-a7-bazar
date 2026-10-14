@@ -54,9 +54,9 @@ const Marquee = async () => {
                         <span
                             className={
                                 item.change.dir === "up"
-                                    ? "font-semibold text-red-600"
-                                    : item.change.dir === "down"
                                     ? "font-semibold text-green-600"
+                                    : item.change.dir === "down"
+                                    ? "font-semibold text-red-600"
                                     : "font-semibold text-gray-500"
                             }
                         >

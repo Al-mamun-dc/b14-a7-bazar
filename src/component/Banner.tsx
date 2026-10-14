@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ClientDate from "./ClientDate";
 
 const Banner = () => {
     return (
@@ -7,9 +8,9 @@ const Banner = () => {
             <div className="flex min-h-45 items-center justify-between rounded-2xl border border-gray-200 bg-[#f9fcf9] px-8 py-6">
                 {/* Left Side */}
                 <div className="max-w-xl">
-                    <p className="mb-2 inline-block rounded-full bg-green-100 px-3 py-1 text-xs text-green-700">
-                        শনিবার, ১০ অক্টোবর, ২০২৬
-                    </p>
+                    
+                        <ClientDate/>
+                    
 
                     <h1 className="text-2xl font-bold text-gray-900">
                         আজকের বাজারের দাম এক নজরে
