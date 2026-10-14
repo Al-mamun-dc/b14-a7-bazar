@@ -28,7 +28,7 @@ const Banner = () => {
                     </a>
                 </div>
 
-                {/* Right Side - Banner Image */}
+                
                 <div className="hidden sm:block">
                     <Image
                         src="/bazar-hero.png"
@@ -36,7 +36,7 @@ const Banner = () => {
                         width={160}
                         height={140}
                         className="w-full h-64"
-                          loading="eager"
+                          loading="eage"
                     />
                 </div>
             </div>
