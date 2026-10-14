@@ -2,6 +2,7 @@ import Banner from "@/component/Banner";
 
 import { Suspense } from "react";
 import Link from "next/link";
+import HomeSkeleton from "@/component/HomeSkeleton";
 
 interface Product {
   id: number;
@@ -170,25 +171,9 @@ const ProductSections = async () => {
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f1f5ef]">
-      <Suspense
-        fallback={
-          <p className="p-4 text-sm text-gray-500">
-            বাজারদর লোড হচ্ছে...
-          </p>
-        }
-      >
-        
-      </Suspense>
-
       <Banner />
 
-      <Suspense
-        fallback={
-          <p className="p-4 text-sm text-gray-500">
-            পণ্যের তথ্য লোড হচ্ছে...
-          </p>
-        }
-      >
+      <Suspense fallback={<HomeSkeleton />}>
         <ProductSections />
       </Suspense>
     </div>
