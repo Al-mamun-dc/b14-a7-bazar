@@ -36,7 +36,7 @@ const Banner = () => {
                         width={160}
                         height={140}
                         className="w-full h-64"
-                          loading="eage"
+                          loading="eager"
                     />
                 </div>
             </div>
