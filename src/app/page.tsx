@@ -151,7 +151,7 @@ const ProductSections = async () => {
       </section>
 
       {/* All Products */}
-      <section>
+      <section id="সব-পণ্য">
         <h2 className="text-base font-bold text-gray-900">
           সব পণ্য
         </h2>

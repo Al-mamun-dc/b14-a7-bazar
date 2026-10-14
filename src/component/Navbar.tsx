@@ -6,10 +6,13 @@ import ClientDate from "./ClientDate";
 import Navlink from "./Navlink";
 import { Suspense } from "react";
 
+import Useinfo from "./Useinfo";
 
-const Navbar =() => {
-    
-  
+
+
+const Navbar = () => {
+
+
   return (
     <nav className="w-full bg-white">
       <div className="max-w-7xl mx-auto h-18 px-5 flex items-center justify-between">
@@ -34,39 +37,23 @@ const Navbar =() => {
               বাজার দর
             </h1>
 
-            <ClientDate/>
+            <ClientDate />
           </div>
 
         </div>
 
-        {/* Right Side - Auth Buttons */}
-        <div className="flex items-center gap-1">
+       <Useinfo/>
 
-          <button
-            type="button"
-            className="px-4 py-2 text-sm font-medium text-[#333333] hover:text-[#079447] transition"
-          >
-            সাইন ইন
-          </button>
 
-          <button
-            type="button"
-            className="px-4 py-2 text-sm font-medium text-white bg-[#079447] rounded-md hover:bg-[#067b3b] transition"
-          >
-            সাইন আপ
-          </button>
-
-        </div>
-       
-        
 
       </div><Suspense
-    fallback={
-      <div className="h-9 border-y border-gray-100" />
-    }
-  >
-    <Navlink />
-  </Suspense>
+        fallback={
+          <div className="h-9 border-y border-gray-100" />
+        }
+      >
+        <Navlink />
+      </Suspense>
+
     </nav>
   );
 };
