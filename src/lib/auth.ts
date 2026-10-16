@@ -5,7 +5,13 @@ import { mongodbAdapter } from "@better-auth/mongo-adapter";
 const client = new MongoClient(process.env.MONGODB_URL as string);
 const db = client.db("bazar-dor");
 
+
 export const auth = betterAuth({
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://bazar-dor-seven-orcin.vercel.app",
+    "https://bazar-dor-seven-orcin-seven.vercel.app",
+],
     emailAndPassword: { 
     enabled: true, 
   }, 
@@ -29,3 +35,5 @@ console.log({
   githubIdLoaded: Boolean(process.env.GITHUB_CLIENT_ID),
   githubSecretLoaded: Boolean(process.env.GITHUB_CLIENT_SECRET),
 });
+
+
